@@ -13,7 +13,8 @@ app.get("/", function(req, res){
     response.on("data", function(data){
       const weatherData = JSON.parse(data)
       const temp = weatherData.main.temp
-      console.log(temp);
+      const weatherDescription = weatherData.weather[0].description
+      console.log(weatherDescription);
 
       // const object = {
       //   name: "Archana",
