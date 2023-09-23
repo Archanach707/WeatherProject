@@ -14,7 +14,9 @@ app.get("/", function(req, res){
       const weatherData = JSON.parse(data)
       const temp = weatherData.main.temp
       const weatherDescription = weatherData.weather[0].description
-      console.log(weatherDescription);
+      res.send("<h1>The temperature in London is " + temp + "degrees celcius.</h1>");
+      
+      // console.log(weatherDescription);
 
       // const object = {
       //   name: "Archana",
@@ -25,7 +27,7 @@ app.get("/", function(req, res){
     });
   });
 
-  res.send("Server is up and running.");
+  // res.send("Server is up and running.");
   
 });
 
